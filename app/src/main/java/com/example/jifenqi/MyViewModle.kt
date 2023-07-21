@@ -30,7 +30,7 @@ class MyViewModle : ViewModel() {
             newScore.visitScore += num
         }
         history.add(scoreLiveData.value!!)
-        scoreLiveData.value = newScore
+        scoreLiveData.value = newScore//
     }
 
     fun revert() {
