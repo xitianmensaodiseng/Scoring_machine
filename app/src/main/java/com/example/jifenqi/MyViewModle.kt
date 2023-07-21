@@ -19,7 +19,7 @@ class MyViewModle : ViewModel() {
     private val history = mutableListOf<Score>()
 
     init {
-        reset()
+        reset()//i
     }
 
     fun add(homeFlag: Boolean, num: Int) {
