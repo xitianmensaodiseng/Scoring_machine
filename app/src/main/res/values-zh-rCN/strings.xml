@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">记分器</string>
+    <string name="team_red">红队</string>
+    <string name="team_bule">蓝队</string>
+    <string name="Score_red">0</string>
+    <string name="Score_bule">0</string>
+    <string name="Score_red_add_1">+1</string>
+    <string name="Score_bule_add_1">+1</string>
+    <string name="Score_bule_add_2">+2</string>
+    <string name="Score_red_add_2">+2</string>
+    <string name="Score_red_add_3">+3</string>
+    <string name="Score_bule_add_3">+3</string>
+    <string name="fanhui">返回</string>
+    <string name="chongzhi">重置</string>
+    <string name="Time">00:00:00</string>
+    <string name="Competition_tile">赛事</string>
+    <string name="Subsection_tile">小节</string>
+    <string name="start_Pause">开始/暂停</string>
+</resources>
