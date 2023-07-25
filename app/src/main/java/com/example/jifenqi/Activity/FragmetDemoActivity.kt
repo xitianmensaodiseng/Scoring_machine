@@ -1,14 +1,9 @@
 package com.example.jifenqi.Activity
 
-import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.ImageButton
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -17,7 +12,6 @@ import com.example.jifenqi.Fragment.HomeFragment
 import com.example.jifenqi.Fragment.MineFragment
 import com.example.jifenqi.Fragment.ZoomOutPageTransformer
 import com.example.jifenqi.R
-import org.jzvd.jzvideo.TAG
 
 open class FragmetDemoActivity() : AppCompatActivity() {
 
