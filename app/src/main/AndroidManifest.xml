@@ -13,10 +13,10 @@
         android:theme="@style/Theme.JiFenQI"
         tools:targetApi="31">
         <activity
-            android:name=".Animation_activity"
+            android:name=".Activity.Animation_activity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.FragmetDemoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.jifenqi.Activity.MainActivity" />
     </application>
 
 </manifest>

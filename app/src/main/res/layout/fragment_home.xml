@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fra_ima"
+        android:src="@drawable/tianqi"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:padding="30dp"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/fra_bu_Chinesechess"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:src="@drawable/xiangqi"
+            android:contentDescription="TODO" />
+        <ImageButton
+            android:id="@+id/fra_bu_basketball"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:src="@drawable/lanqui"
+            android:contentDescription="TODO" />
+        <ImageButton
+            android:id="@+id/fra_bu_soccer"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:src="@drawable/zuqui"
+            android:contentDescription="TODO" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

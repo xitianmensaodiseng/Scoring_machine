@@ -1,14 +1,16 @@
-package com.example.jifenqi
+package com.example.jifenqi.Activity
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.jifenqi.R
+import com.example.jifenqi.ViewModel.MyViewModel
 import com.example.jifenqi.databinding.ActivityMainBinding
+import com.example.jifenqi.databinding.ActivityScoreBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
@@ -16,8 +18,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-    private lateinit var myViewModle: MyViewModle
+    lateinit var binding: ActivityScoreBinding
+    private lateinit var myViewModle: MyViewModel
     var isTimerRunning  :Boolean = false
     private var timerJob: Job? = null
     private var startTime = 0L
@@ -26,18 +28,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        myViewModle = ViewModelProvider(this).get(MyViewModle::class.java)
-//        myViewModle.setButtonClickListeners(binding.addred1,binding.addred2,binding.addred3,binding.addbule1,
-//            binding.addbule2,binding.addbule3,binding.chongzhi,binding.fanhui)
-//
-//        myViewModle.redfenshu.observe(this, Observer {
-//            binding.hongduifenshu.text=it.toString()
-//        })
-//        myViewModle.bulefenshu.observe(this, Observer {
-//            binding.landuifenshu.text=it.toString()
-//        })
+//        setContentView(R.layout.activity_score)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_score)
+        myViewModle = ViewModelProvider(this).get(MyViewModel::class.java)
         myViewModle.scoreLiveData.observe(this) {
             binding.landuifenshu.text = it.visitScore.toString()
             binding.hongduifenshu.text = it.homeScore.toString()
@@ -132,10 +125,10 @@ class MainActivity : AppCompatActivity() {
             binding.Subsection.text="比赛结束"
             pauseTimer()
         }
-    }
+   }
 }
 
-data class Score(
+data class Score @JvmOverloads constructor(
     var homeScore: Int = 0,//主场分数
     var visitScore: Int = 0//客场分数
 )
