@@ -5,12 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.jifenqi.R
 import com.example.jifenqi.ViewModel.MyViewModel
-import com.example.jifenqi.databinding.ActivityMainBinding
 import com.example.jifenqi.databinding.ActivityScoreBinding
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private var timerJob: Job? = null
     private var startTime = 0L
     private var elapsedTime = 0L
-    private var bar_count=0
+//    private var bar_count=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +34,11 @@ class MainActivity : AppCompatActivity() {
             binding.landuifenshu.text = it.visitScore.toString()
             binding.hongduifenshu.text = it.homeScore.toString()
         }
+       initbindingbutton()
+
+    }
+
+    private fun initbindingbutton() {
         binding.addred1.setOnClickListener {
             myViewModle.add(true, 1)
         }
@@ -67,7 +71,6 @@ class MainActivity : AppCompatActivity() {
             isTimerRunning=!isTimerRunning
             playingtime()
         }
-
     }
 
 
@@ -84,6 +87,7 @@ class MainActivity : AppCompatActivity() {
         timerJob?.cancel()
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun startTimer() {
         isTimerRunning = true
         startTime = System.currentTimeMillis() - elapsedTime
