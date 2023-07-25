@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.jifenqi.Activity.MainActivity" />
+        <activity android:name="com.example.jifenqi.Activity.ScoreActivity" />
     </application>
 
 </manifest>

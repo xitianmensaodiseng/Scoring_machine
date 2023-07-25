@@ -16,7 +16,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class MainActivity : AppCompatActivity() {
+class ScoreActivity : AppCompatActivity() {
     lateinit var binding: ActivityScoreBinding
     private lateinit var myViewModle: MyViewModel
     var isTimerRunning  :Boolean = false
