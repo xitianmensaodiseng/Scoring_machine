@@ -13,6 +13,7 @@ import com.example.jifenqi.Fragment.MineFragment
 import com.example.jifenqi.Fragment.ZoomOutPageTransformer
 import com.example.jifenqi.R
 
+@Suppress("DEPRECATION")
 open class FragmetDemoActivity() : AppCompatActivity() {
 
     val TAG = "ASDF"
@@ -58,7 +59,7 @@ open class FragmetDemoActivity() : AppCompatActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int,
             ) {
-                updateBottomNavIcon(position, positionOffset)
+                updateBottomNavIcon(position)
             }
 
             override fun onPageSelected(position: Int) {
@@ -72,7 +73,7 @@ open class FragmetDemoActivity() : AppCompatActivity() {
 
     }
 
-        private fun updateBottomNavIcon(position: Int, positionOffset: Float) {
+        private fun updateBottomNavIcon(position: Int) {
             val homeIcon = findViewById<RadioButton>(R.id.rb_msg)
             val mineIcon = findViewById<RadioButton>(R.id.rb_people)
 
@@ -85,17 +86,11 @@ open class FragmetDemoActivity() : AppCompatActivity() {
                 mineIcon.isChecked=true
             }
 
-            // 根据 positionOffset 来实现图标的动画效果
-            // 假设底部导航栏图标在选中时要放大，未选中时要缩小
-//            val scaleSelected = 1.2f
-//            val scaleUnselected = 1.0f
-//
-//            homeIcon.scaleX = scaleUnselected + (scaleSelected - scaleUnselected) * positionOffset
-//            homeIcon.scaleY = scaleUnselected + (scaleSelected - scaleUnselected) * positionOffset
-//            mineIcon.scaleX = scaleSelected - (scaleSelected - scaleUnselected) * positionOffset
-//            mineIcon.scaleY = scaleSelected - (scaleSelected - scaleUnselected) * positionOffset
+
         }
 
+
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (vp2.currentItem == 0) {
             super.onBackPressed()
