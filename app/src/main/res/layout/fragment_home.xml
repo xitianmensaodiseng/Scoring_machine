@@ -3,37 +3,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="首页"
+        android:textSize="@dimen/scoreTextSize"/>
     <ImageView
+        android:paddingTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fra_ima"
         android:src="@drawable/tianqi"
         android:layout_gravity="center"
         />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="20dp"
-        android:padding="30dp"
+        android:padding="20dp"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="创建比赛"
+            />
+        <View
+            android:layout_width="30dp"
+            android:layout_height="0dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="加入比赛"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="选择场景"
+        android:textSize="@dimen/scoreadd_red"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="30dp"
         android:layout_gravity="center">
         <ImageButton
             android:id="@+id/fra_bu_Chinesechess"
             android:layout_width="100sp"
             android:layout_height="100sp"
+            android:layout_weight="1"
             android:src="@drawable/xiangqi"
             android:contentDescription="TODO" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
         <ImageButton
             android:id="@+id/fra_bu_basketball"
             android:layout_width="100sp"
             android:layout_height="100sp"
+            android:layout_weight="1"
             android:src="@drawable/lanqui"
             android:contentDescription="TODO" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
         <ImageButton
             android:id="@+id/fra_bu_soccer"
             android:layout_width="100sp"
             android:layout_height="100sp"
             android:src="@drawable/zuqui"
+            android:layout_weight="1"
             android:contentDescription="TODO" />
 
     </LinearLayout>
