@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import com.example.jifenqi.R
 
 class MineFragment : Fragment() {
+//创建好一个fragment碎片xml
+    //创建一个Fragment子类
+    //添加依赖
 
-
-    override fun onCreateView(
+    override fun onCreateView(//在onCreateView中实现fragment_home xml 的创建图像化
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

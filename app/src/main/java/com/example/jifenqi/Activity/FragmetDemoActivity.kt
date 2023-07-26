@@ -20,7 +20,7 @@ open class FragmetDemoActivity() : AppCompatActivity() {
 
     val fragmentList = mutableListOf<Fragment>()
 
-    private lateinit var vp2: ViewPager2
+    private lateinit var vp2: ViewPager2  //定义一个viewpager全局变量
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ open class FragmetDemoActivity() : AppCompatActivity() {
 
     }
 
-    private fun radioButtonCheck() {
+    private fun radioButtonCheck() {//设置按钮监听，实现按钮页面滑动
         findViewById<RadioButton>(R.id.rb_msg).setOnClickListener{
 
             vp2.currentItem = 0 // 切换到首页 Fragment
@@ -45,15 +45,19 @@ open class FragmetDemoActivity() : AppCompatActivity() {
     }
 
 
-    private fun initPaeger() {
+    private fun initPaeger() {//初始化程序
         val pagerAdapter = ScreenSlidePagerAdapter(this)
         vp2 = findViewById(R.id.Viewpager)
         vp2.adapter = pagerAdapter
+        //设置界面滑动切换的效果
         vp2.setPageTransformer(ZoomOutPageTransformer())
+
+        //添加Fragment组件到数组中，在ScreenSlidePagerAdapter适配器中 override fun createFragment实现Fragment与viewpager2的联系
         fragmentList.add(HomeFragment())
         fragmentList.add(MineFragment())
-
+//Viewpager2滑动监听
         vp2.registerOnPageChangeCallback(object  : ViewPager2.OnPageChangeCallback(){
+            //当滑动界面是的方法
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
@@ -73,7 +77,7 @@ open class FragmetDemoActivity() : AppCompatActivity() {
 
     }
 
-        private fun updateBottomNavIcon(position: Int) {
+        private fun updateBottomNavIcon(position: Int) {//实现按钮点亮与滑动界面的联动
             val homeIcon = findViewById<RadioButton>(R.id.rb_msg)
             val mineIcon = findViewById<RadioButton>(R.id.rb_people)
 

@@ -17,9 +17,13 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class ScoreActivity : AppCompatActivity() {
+    //binding的对象确定
     lateinit var binding: ActivityScoreBinding
+    //ViewModel的对象确定
     private lateinit var myViewModle: MyViewModel
+    //定义一个时间
     var isTimerRunning  :Boolean = false
+
     private var timerJob: Job? = null
     private var startTime = 0L
     private var elapsedTime = 0L
