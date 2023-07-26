@@ -16,7 +16,6 @@ import com.example.jifenqi.Http.WeatherCallback
 import com.example.jifenqi.Http.WeatherData
 import com.example.jifenqi.Http.WeatherHttp
 import com.example.jifenqi.R
-import org.w3c.dom.Text
 
 class HomeFragment : Fragment() {
 //创建好一个fragment碎片xml
@@ -60,6 +59,7 @@ class HomeFragment : Fragment() {
                 val air = weatherData.air
 
                 activity?.runOnUiThread {
+
                     conditionToday?.isSelected = true
                     conditionToday?.text = "城市:$city   今日天气: $wea   风向：$win   更新时间：$update_time  " +
                             "天气对应图标：$wea_img  实时温度:$tem℃   白天温度(高温): $tem_day℃  白天温度(低温)：$tem_night℃ " +
