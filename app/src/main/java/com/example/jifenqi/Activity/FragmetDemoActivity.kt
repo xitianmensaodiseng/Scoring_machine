@@ -3,6 +3,7 @@ package com.example.jifenqi.Activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.RadioButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -28,6 +29,7 @@ open class FragmetDemoActivity() : AppCompatActivity() {
 
         initPaeger()
         radioButtonCheck()
+
 
     }
 
