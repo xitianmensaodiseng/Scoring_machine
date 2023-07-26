@@ -23,5 +23,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Home_page">Home_page</string>
+    <string name="basketball">basketball</string>
+    <string name="Weather_report">Weather_report</string>
+    <string name="Create_contest">Create_contest</string>
+    <string name="Enter_the_race">Enter_the_race</string>
+    <string name="Select_scene">Select_scene</string>
+    <string name="Chinese_chess">Chinese_chess</string>
+    <string name="soccer">soccer</string>
+    <string name="ISImageView">This is an ImageView</string>
 
 </resources>
